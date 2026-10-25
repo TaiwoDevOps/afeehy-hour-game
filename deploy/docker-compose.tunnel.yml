@@ -1,0 +1,9 @@
+# Override for a Cloudflare quick tunnel: publishes the game server on this
+# machine only (127.0.0.1:8080) so cloudflared can reach it. Cloudflare does the
+# TLS, so Caddy isn't needed in this mode. Use:
+#   docker compose -f docker-compose.yml -f docker-compose.tunnel.yml up -d --build app
+#   cloudflared tunnel --protocol http2 --url http://localhost:8080
+services:
+  app:
+    ports:
+      - "127.0.0.1:8080:8080"

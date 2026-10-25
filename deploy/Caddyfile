@@ -1,0 +1,10 @@
+# Caddy terminates TLS and forwards to the game server.
+# With DOMAIN=localhost Caddy issues a local certificate; with a real
+# domain it obtains one from Let's Encrypt automatically (ports 80 and 443
+# must be reachable and the DNS record must already point here).
+{$DOMAIN} {
+	encode zstd gzip
+	reverse_proxy app:8080 {
+		flush_interval -1    # stream /events (Server-Sent Events) without buffering
+	}
+}

@@ -1,0 +1,135 @@
+{
+  "event": "Afeehy Hour",
+  "date": "2026-10-16",
+  "questions_asked": 16,
+  "claims_debated": 2,
+  "players_joined": 27,
+  "leaderboard": [
+    {
+      "name": "Sadiq",
+      "score": 60,
+      "wins": 3,
+      "correct": 13
+    },
+    {
+      "name": "Aduke",
+      "score": 59,
+      "wins": 2,
+      "correct": 15
+    },
+    {
+      "name": "Chinwendu",
+      "score": 57,
+      "wins": 3,
+      "correct": 12
+    },
+    {
+      "name": "Posh",
+      "score": 57,
+      "wins": 3,
+      "correct": 12
+    },
+    {
+      "name": "Michael Ozor",
+      "score": 55,
+      "wins": 1,
+      "correct": 16
+    },
+    {
+      "name": "Uju",
+      "score": 49,
+      "wins": 1,
+      "correct": 14
+    },
+    {
+      "name": "ARA",
+      "score": 42,
+      "wins": 0,
+      "correct": 14
+    },
+    {
+      "name": "Shay",
+      "score": 42,
+      "wins": 0,
+      "correct": 14
+    },
+    {
+      "name": "eightball",
+      "score": 42,
+      "wins": 0,
+      "correct": 14
+    },
+    {
+      "name": "Success",
+      "score": 39,
+      "wins": 0,
+      "correct": 13
+    },
+    {
+      "name": "Bunmi",
+      "score": 37,
+      "wins": 1,
+      "correct": 10
+    },
+    {
+      "name": "D1 Baba",
+      "score": 37,
+      "wins": 1,
+      "correct": 10
+    },
+    {
+      "name": "Debo",
+      "score": 37,
+      "wins": 1,
+      "correct": 10
+    },
+    {
+      "name": "Chibugo",
+      "score": 36,
+      "wins": 0,
+      "correct": 12
+    },
+    {
+      "name": "EM",
+      "score": 33,
+      "wins": 0,
+      "correct": 11
+    },
+    {
+      "name": "idy",
+      "score": 30,
+      "wins": 0,
+      "correct": 10
+    },
+    {
+      "name": "Chiachia",
+      "score": 21,
+      "wins": 0,
+      "correct": 7
+    },
+    {
+      "name": "Tolu",
+      "score": 21,
+      "wins": 0,
+      "correct": 7
+    },
+    {
+      "name": "SEYI PUMPING",
+      "score": 12,
+      "wins": 0,
+      "correct": 4
+    },
+    {
+      "name": "Tee A",
+      "score": 6,
+      "wins": 0,
+      "correct": 2
+    },
+    {
+      "name": "mgbakocentricAi",
+      "score": 3,
+      "wins": 0,
+      "correct": 1
+    }
+  ]
+}

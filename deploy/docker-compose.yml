@@ -1,0 +1,39 @@
+# Afeehy Hour production stack: the game server plus Caddy for HTTPS.
+# Used unchanged on a laptop (DOMAIN=localhost) and on the AWS instance.
+services:
+  app:
+    build: ./app                 # the application files (contents of the DevOps zip)
+    restart: unless-stopped
+    environment:
+      HOST_KEY: ${HOST_KEY:?set HOST_KEY in .env}
+      EVENT_CODE: ${EVENT_CODE:?set EVENT_CODE in .env}
+      TRUST_PROXY: "1"           # Caddy sits in front, so trust its X-Forwarded-For
+    volumes:
+      - data:/data               # afeehy-data.json survives restarts and rebuilds
+    expose:
+      - "8080"                   # reachable by Caddy only, not from the internet
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env}
+    ports:
+      - "80:80"                  # Let's Encrypt validation and redirect to https
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data         # certificates
+      - caddy_config:/config
+    depends_on:
+      - app
+
+volumes:
+  data:
+  caddy_data:
+  caddy_config:
